@@ -6,7 +6,7 @@ $host = "localhost";
 $port = "5432";
 $dbname = "ejercicios_python";
 $user = "postgres";
-$password = "CAMBIA_AQUI_TU_CONTRASENA";
+$password = "sebas1234";
 
 try {
     $conexion = new PDO(
