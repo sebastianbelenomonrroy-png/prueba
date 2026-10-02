@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="contenedor pagina">
+        <a class="volver" href="/">← Volver al menú</a>
+
+        <section class="panel">
+            <span class="etiqueta">EJERCICIO 02</span>
+            <h1>Tabla de multiplicar</h1>
+            <p>Escribe un número para generar su tabla del 1 al 10.</p>
+
+            <form method="POST">
+                <label for="numero">Número</label>
+                <input type="number" id="numero" name="numero" value="{{ numero }}" required>
+                <button type="submit">Mostrar tabla</button>
+            </form>
+
+            {% if tabla %}
+            <div class="tabla">
+                {% for linea in tabla %}
+                <div class="fila">{{ linea }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="contenedor pagina">
+        <a class="volver" href="/">← Volver al menú</a>
+
+        <section class="panel">
+            <span class="etiqueta">EJERCICIO 03</span>
+            <h1>Adivina el número</h1>
+            <p>Hay un número secreto entre 1 y 100. Intenta descubrirlo.</p>
+
+            <form method="POST">
+                <label for="numero">Tu intento</label>
+                <input type="number" id="numero" name="numero" min="1" max="100" required>
+                <button type="submit">Adivinar</button>
+            </form>
+
+            {% if resultado %}
+            <div class="resultado">{{ resultado }}</div>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+CREATE DATABASE ejercicios_python;
+
+
+CREATE TABLE IF NOT EXISTS intentos (
+    id SERIAL PRIMARY KEY,
+    ejercicio VARCHAR(100) NOT NULL,
+    entrada TEXT NOT NULL,
+    resultado TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

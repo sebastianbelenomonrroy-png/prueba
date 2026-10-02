@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="contenedor">
+        <section class="hero">
+            <span class="etiqueta">PYTHON + FLASK</span>
+            <h1>Ejercicios interactivos</h1>
+            <p>Selecciona un ejercicio para comenzar.</p>
+        </section>
+
+        <section class="grid">
+            <a class="tarjeta" href="/ejercicio1">
+                <div class="icono">01</div>
+                <h2>Par o impar</h2>
+                <p>Comprueba si un número es par o impar.</p>
+                <span class="accion">Abrir ejercicio →</span>
+            </a>
+
+            <a class="tarjeta" href="/ejercicio2">
+                <div class="icono">02</div>
+                <h2>Tabla de multiplicar</h2>
+                <p>Genera la tabla del 1 al 10.</p>
+                <span class="accion">Abrir ejercicio →</span>
+            </a>
+
+            <a class="tarjeta" href="/ejercicio3">
+                <div class="icono">03</div>
+                <h2>Adivina el número</h2>
+                <p>Intenta descubrir el número secreto.</p>
+                <span class="accion">Abrir ejercicio →</span>
+            </a>
+        </section>
+
+        <footer>
+            Python · Flask · PHP · PostgreSQL · POO
+        </footer>
+    </main>
+</body>
+</html>
